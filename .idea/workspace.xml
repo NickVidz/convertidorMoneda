@@ -4,16 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="52b3668c-c9cc-42f0-bcb0-c4368e0b72ea" name="Changes" comment="Version 0.0">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/gson_2_10_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Excepciones/ExceptionInConvertion.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Modelos/ChangeApiRecord.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Modelos/Monedas.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/requestResponse.java" afterDir="false" />
+    <list default="true" id="52b3668c-c9cc-42f0-bcb0-c4368e0b72ea" name="Changes" comment="Version 1.0">
+      <change afterPath="$PROJECT_DIR$/src/Modelos/allCodes.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/convertidorMoneda.iml" beforeDir="false" afterPath="$PROJECT_DIR$/convertidorMoneda.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Principal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Principal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Principal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/requestResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/requestResponse.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,8 +19,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Record" />
         <option value="Class" />
+        <option value="Record" />
       </list>
     </option>
   </component>
@@ -85,11 +80,20 @@
       <option name="project" value="LOCAL" />
       <updated>1716067780718</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Version 1.0">
+      <option name="closed" value="true" />
+      <created>1716081439875</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1716081439875</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Version 0.0" />
-    <option name="LAST_COMMIT_MESSAGE" value="Version 0.0" />
+    <MESSAGE value="Version 1.0" />
+    <option name="LAST_COMMIT_MESSAGE" value="Version 1.0" />
   </component>
 </project>

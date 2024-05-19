@@ -3,10 +3,11 @@ import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
+import java.util.List;
 import java.util.Scanner;
-
 import Modelos.ChangeApiRecord;
 import Modelos.Monedas;
+import Modelos.allCodes;
 import Modelos.entornoVariables;
 import com.google.gson.FieldNamingPolicy;
 import com.google.gson.Gson;
@@ -69,7 +70,6 @@ public interface requestResponse {
                 if(response.body().contains("unsupported-code")){
                     System.out.println("Codigo no reconocido, recuerda mirar los codigos disponibles en la opcion #3");
                 }else{
-
                     Gson gson = new GsonBuilder()
                             .setFieldNamingPolicy(FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
                             .create();
@@ -81,6 +81,8 @@ public interface requestResponse {
                     monedaConvertida.setCantidadBase(amount);
 
                     Monedas.historical.add(monedaConvertida);
+
+                    System.out.println(monedaConvertida);
                 }
 
 
@@ -90,6 +92,34 @@ public interface requestResponse {
                 System.out.println("Ocurrio una excepcion");
             }
 
+
+
+    }
+
+    static void requestAll() throws IOException, InterruptedException {
+            String URL = "https://v6.exchangerate-api.com/v6/"+entornoVariables.ApiKey+"/codes";
+
+            HttpClient cliente = HttpClient.newHttpClient();
+            HttpRequest request = HttpRequest.newBuilder()
+                    .uri(URI.create(URL))
+                    .build();
+
+            HttpResponse<String> response = cliente
+                    .send(request, HttpResponse.BodyHandlers.ofString());
+
+            String Json = response.body();
+
+        Gson gson = new GsonBuilder()
+                .setFieldNamingPolicy(FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
+                .create();
+
+        allCodes changedApi = gson.fromJson(Json, allCodes.class);
+        List<List<String>> monedas = changedApi.supported_codes();
+        for (List<String> parMoneda : monedas) {
+            String codigo = parMoneda.get(0);
+            String nombre = parMoneda.get(1);
+            System.out.println("- " + codigo + ": " + nombre);
+        }
 
 
     }
