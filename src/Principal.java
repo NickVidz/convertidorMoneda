@@ -68,10 +68,10 @@ public class Principal{
                                     break;
                                 default:
                                     System.out.println("Opcion invalida, intenta nuevamente");
+                                    break;
                                 }
-
-
                          }while (subDesition);
+                         break;
 
                     case 2:
                         System.out.println("Ingresa el codigo de la moneda base");

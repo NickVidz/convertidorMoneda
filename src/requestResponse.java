@@ -115,9 +115,9 @@ public interface requestResponse {
 
         allCodes changedApi = gson.fromJson(Json, allCodes.class);
         List<List<String>> monedas = changedApi.supported_codes();
-        for (List<String> parMoneda : monedas) {
-            String codigo = parMoneda.get(0);
-            String nombre = parMoneda.get(1);
+        for (List<String> i : monedas) {
+            String codigo = i.get(0);
+            String nombre = i.get(1);
             System.out.println("- " + codigo + ": " + nombre);
         }
 
