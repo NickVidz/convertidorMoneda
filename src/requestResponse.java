@@ -27,7 +27,6 @@ public interface requestResponse {
                     .send(request, HttpResponse.BodyHandlers.ofString());
 
             String Json = response.body();
-            System.out.println(Json);
 
             Gson gson = new GsonBuilder()
                     .setFieldNamingPolicy(FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
@@ -89,7 +88,7 @@ public interface requestResponse {
 
             }
         }catch (RuntimeException e){
-                System.out.println("Ocurrio una excepcion");
+                System.out.println("Ocurrio una excepcion" + e.getMessage());
             }
 
 

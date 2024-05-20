@@ -28,9 +28,9 @@ public class Principal{
                             System.out.println("*****************************");
                             System.out.println("Elige la conversion que desees");
                             System.out.println("1. Peso Colombiano (COP) -------> Dolar Estadounidense (USD) ");
-                            System.out.println("2 .Dolar Estadounidense (USD) ------> Peso Colombiano (COP) ");
-                            System.out.println("3. Euro (EUR) ------> Peso Colombiano (COP) ");
-                            System.out.println("4 .Peso Colombiano ------> Euro (EUR) ");
+                            System.out.println("2. Dolar Estadounidense (USD) ------> Peso Colombiano (COP) ");
+                            System.out.println("3. Peso Argentino (ARS) ------> Peso Colombiano (COP) ");
+                            System.out.println("4. Peso Colombiano ------> Peso Argentino (ARS) ");
                             System.out.println("5. Salir");
                             System.out.println("*****************************");
                             respuesta = teclado.nextInt();
@@ -54,14 +54,14 @@ public class Principal{
                                     amount = teclado.nextInt();
                                     amountDecimal = amount;
 
-                                    requestResponse.Convert("EUR", "COP", amountDecimal);
+                                    requestResponse.Convert("ARS", "COP", amountDecimal);
                                     break;
                                 case 4:
                                     System.out.println("Ingrese la cantidad que quiere convertir");
                                     amount = teclado.nextInt();
                                     amountDecimal = amount;
 
-                                    requestResponse.Convert("COP", "EUR", amountDecimal);
+                                    requestResponse.Convert("COP", "ARS", amountDecimal);
                                     break;
                                 case 5:
                                     subDesition = false;
@@ -102,7 +102,7 @@ public class Principal{
                         break;
                 }
             } catch (InputMismatchException e){
-                System.out.println("Tipo de dato ingresado no valido");
+                System.out.println("¡Tipo de dato ingresado no valido, recuerda que debes ingresar numeros!");
                 teclado.nextLine();
 
 
